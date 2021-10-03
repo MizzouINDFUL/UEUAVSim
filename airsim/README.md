@@ -1,5 +1,9 @@
 # 3D Point Cloud Reconstruction with AirSim
 
+If you use our code or workflow, please reference our ICCV WAMMI 2021 article. Latex citation: 
+
+@article{alvey_anderson_buck_deardorff_keller, title={Simulated Photorealistic Deep Learning Framework and Workflows to Accelerate Computer Vision and Unmanned Aerial Vehicle Research}, journal={Workshop on Analysis of Aerial Motion Imagery (WAAMI) in conjunction with International Conference on Computer Vision (ICCV 2021)}, author={Alvey, Brendan and Anderson, Derek and Buck, Andrew and Deardorff, Matthew and Keller, James}}
+
 [AirSim](https://microsoft.github.io/AirSim/) can be used to collect and reconstruct 3D point clouds using [Unreal Engine](https://www.unrealengine.com/). This page describes how to set up your environment to collect data, either manually or from a list of pre-scripted waypoints, and reconstruct a 3D point cloud from a sequence of color and depth images, along with the corresponding camera poses. The resulting data is visualized using [Open3D](http://www.open3d.org/) and can be used for a variety of research applications.
 
 ![](assets/neighborhood_reconstruction.png)
