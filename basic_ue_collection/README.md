@@ -1,5 +1,9 @@
 # UE_No_Blueprint_Basic_Collect
 
+If you use our code or workflow, please reference our ICCV WAMMI 2021 article. Latex citation: 
+
+@article{alvey_anderson_buck_deardorff_keller, title={Simulated Photorealistic Deep Learning Framework and Workflows to Accelerate Computer Vision and Unmanned Aerial Vehicle Research}, journal={Workshop on Analysis of Aerial Motion Imagery (WAAMI) in conjunction with International Conference on Computer Vision (ICCV 2021)}, author={Alvey, Brendan and Anderson, Derek and Buck, Andrew and Deardorff, Matthew and Keller, James}}
+
 ## Introduction
 
 This document describes how to setup and collect data using only the native Unreal Engine 4 tools and the [Movie Render Plugin](https://docs.unrealengine.com/4.26/en-US/AnimatingObjects/Sequencer/Workflow/RenderAndExport/HighQualityMediaExport/). This could be used to easily standup data collections to facilitate machine learning, computer vision, robotics, or any other project that can make use of the simulated imagery. 
