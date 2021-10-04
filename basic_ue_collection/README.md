@@ -1,4 +1,4 @@
-# UE_No_Blueprint_Basic_Collect
+# Unreal Engine 4 Basic Simulated Data Collection Tutorial
 
 ## Introduction
 
