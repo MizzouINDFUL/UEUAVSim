@@ -6,6 +6,10 @@ This document describes how to setup and collect data using only the native Unre
 
 Please see the accompanying "Unreal Engine 4 Basic Simulated Data Collection over Agricultural Scene" tutorial video at: [Mizzou Minfdful YouTube Channel](https://bit.ly/MizzouINDFUL)
 
+If you use our code or workflow, please reference our work. ICCV WAMMI 2021 latex citation: 
+
+@article{alvey_anderson_buck_deardorff_keller, title={Simulated Photorealistic Deep Learning Framework and Workflows to Accelerate Computer Vision and Unmanned Aerial Vehicle Research}, journal={Workshop on Analysis of Aerial Motion Imagery (WAAMI) in conjunction with International Conference on Computer Vision (ICCV 2021)}, author={Alvey, Brendan and Anderson, Derek and Buck, Andrew and Deardorff, Matthew and Keller, James}}
+
 ## Unreal Engine Setup
 
 1. Download and install the [Epic Games Launcher](https://www.epicgames.com/store/en-US/download)
