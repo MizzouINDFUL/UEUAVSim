@@ -1,9 +1,5 @@
 # UE_No_Blueprint_Basic_Collect
 
-If you use our code or workflow, please reference our ICCV WAMMI 2021 article. Latex citation: 
-
-@article{alvey_anderson_buck_deardorff_keller, title={Simulated Photorealistic Deep Learning Framework and Workflows to Accelerate Computer Vision and Unmanned Aerial Vehicle Research}, journal={Workshop on Analysis of Aerial Motion Imagery (WAAMI) in conjunction with International Conference on Computer Vision (ICCV 2021)}, author={Alvey, Brendan and Anderson, Derek and Buck, Andrew and Deardorff, Matthew and Keller, James}}
-
 ## Introduction
 
 This document describes how to setup and collect data using only the native Unreal Engine 4 tools and the [Movie Render Plugin](https://docs.unrealengine.com/4.26/en-US/AnimatingObjects/Sequencer/Workflow/RenderAndExport/HighQualityMediaExport/). This could be used to easily standup data collections to facilitate machine learning, computer vision, robotics, or any other project that can make use of the simulated imagery. 
@@ -17,10 +13,14 @@ Please see the accompanying "Unreal Engine 4 Basic Simulated Data Collection ove
 3. Launch the engine and create a blank project. Select the Architecture, Engineering, and Construction template category, select blank, and specify a location for the project then click Create Project. 
 4. By default the Movie Render Queue Plugin should be enabled. To double check, Click Edit in the top menu of of the Unreal Engine Editor and select plugins. Search for the Movie Render Queue Plugin and ensure that it is enabled. 
 
+![Epic Games Launcher](images/epic_launcher.PNG)
+
 ## Download and Load Content
 
 1. In the Epic Games Launcher, navigate to the Marketplace tab in the Unreal Engine section. Selct and download any content packages you want to use. In the tutorial video, we used the [Barnyard Megapack](https://www.unrealengine.com/marketplace/en-US/product/barnyard-mega-pack) Add your downloaded content to the project you created.
 2. Open your added content in the editor. With most content packs you can open a map by clicking on File->Open Level->Content->Content Package Name->Maps->Map Name
+
+![Epic Games Marketplace - Barnyard Megascan Pack](images/marketplace_ss.PNG)
 
 ## Simulated Data Collection
 
@@ -38,10 +38,24 @@ Please see the accompanying "Unreal Engine 4 Basic Simulated Data Collection ove
 9. Click the Film looking button to set output options (resolution, directory, render pass).
 10. Click capture to begin saving data to the Saved folder of your project directory. 
 
+![Screenshot from tutorial video of simulated data collection](images/barnyard_ss.PNG)
+
 ## Object Labels and Scene Depth 
 
 1. In the editor, click Edit->Project Settings. Search for "Custom Depth-Stencil Pass" and select "Enabled with Stencil"
 2. To assign a stencil value to an object, click on and object in the World Editor panel. Under Rendering enable the "Render CustomDepth Pass" and set the "CustomDepth Stencil Value" to an integer value. 
 3. Set the "Image Output Format" option in the sequencer (see previous section, step 9.) to "Custom Render Passes"
 4. Under "Composition Graph Options"->"Include Render Passes" add "Custom Stencil", "Scene Depth", and "Final Image" to output object labels, depth, and RGB images for the sequence. See the video for modifying the stencil buffer to remove the text and/or take into account occlusion of other objects. 
- 
+5. See tutorial video for modifications to stencil buffer to remove text value tiling and/or to label only valid points, taking into account occlusion.  
+
+Example collection images without valid point check.
+
+![Example collection images without valid point check.](images/no_occlusion.PNG)
+
+Valid point CustomStencil material.
+
+![Valid point CustomStencil material.](images/valid_point_shader.PNG)
+
+Example collection images with valid point check.
+
+![Example collection images with valid point check.](images/occlusion.PNG)
